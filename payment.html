@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <!--site logo (click to go back to homepage)-->
+    <a href="index.html">
+      <img id="headerLogo" src="images/siteLogo.png" alt="Janky Movies">
+    </a>
+
+    <!-- search bar -->
+    <div class="searchBar">
+      <input type="text" name="search" placeholder="Search..">
+    </div>
+
+    <!-- login and signup buttons -->
+      <div class="button-grp">
+        <button class="userBtn">LOG IN</button>
+        <button class="userBtn">SIGN UP</button>
+      </div>
+  </div>
+
+  <div class="paymentBody">
+    <div class="left-pay">
+      <!-- collapsable section: payment -->
+      <div class="column payment">
+
+        <p class="collapse" id="selectTix"> 1 Select Tickets </p>
+        <div class="content show">
+            <div class="box">
+              <p class="p-inside">General (ages 14-64)</p>
+              <input class="count" id="generalTix" type="number" value="0" step="1" min="0" max="10">
+            </div>
+            <br>
+            <div class="box" id="selectSeats">
+              <p class="p-inside">Child (ages 3-13) </p>
+              <input class="count" id="childTix" type="number" value="0" step="1" min="0" max="10">
+            </div>
+            <br>
+            <div class="box">
+              <p class="p-inside">Senior (ages 65+)</p>
+              <input class="count" id="seniorTix" type="number" value="0" step="1" min="0" max="10">
+            </div>
+            <br>
+        </div>
+
+        <p class="collapse"> 2 Seat Selection </p>
+        <div class="content">
+          <div class="theatreSeats">
+            <div id="screen">SCREEN</div>
+
+            <div id="lettersL">
+              <div id="seatLetters">
+                <div id="frontLet">A B C</div>
+
+                <div id="backLet">D E F G H I</div>
+              </div>
+            </div>
+
+            <div id="actSeats">
+              <div id="frontSect">
+                <div class="btn-group">
+                  <button class="seatBtn" id="A1"></button>
+                  <button class="seatBtn" id="A2"></button>
+                  <button class="seatBtn" id="A3"></button>
+                  <button class="seatBtn" id="A4" disabled></button>
+                  <button class="seatBtn" id="A5" disabled></button>
+                  <button class="seatBtn" id="A6"></button>
+                  <button class="seatBtn" id="A7"></button>
+                  <button class="seatBtn" id="A8"></button>
+                  <button class="seatBtn" id="A9"></button>
+                  <button class="seatBtn" id="A10"></button>
+                  <button class="seatBtn" id="A11"></button>
+                  <button class="seatBtn" id="A12"></button>
+                  <button class="seatBtn" id="A13"></button>
+                  <button class="seatBtn" id="A14"></button>
+                  <button class="seatBtn" id="A15"></button>
+
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="B1"></button>
+                  <button class="seatBtn" id="B2"></button>
+                  <button class="seatBtn" id="B3"></button>
+                  <button class="seatBtn" id="B4"></button>
+                  <button class="seatBtn" id="B5"></button>
+                  <button class="seatBtn" id="B6"></button>
+                  <button class="seatBtn" id="B7"></button>
+                  <button class="seatBtn" id="B8"></button>
+                  <button class="seatBtn" id="B9"></button>
+                  <button class="seatBtn" id="B10"></button>
+                  <button class="seatBtn" id="B11"></button>
+                  <button class="seatBtn" id="B12"></button>
+                  <button class="seatBtn" id="B13"></button>
+                  <button class="seatBtn" id="B14"></button>
+                  <button class="seatBtn" id="B15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="C1"></button>
+                  <button class="seatBtn" id="C2"></button>
+                  <button class="seatBtn" id="C3"></button>
+                  <button class="seatBtn" id="C4"></button>
+                  <button class="seatBtn" id="C5"></button>
+                  <button class="seatBtn" id="C6"></button>
+                  <button class="seatBtn" id="C7"></button>
+                  <button class="seatBtn" id="C8"></button>
+                  <button class="seatBtn" id="C9"></button>
+                  <button class="seatBtn" id="C10"></button>
+                  <button class="seatBtn" id="C11"></button>
+                  <button class="seatBtn" id="C12" disabled></button>
+                  <button class="seatBtn" id="C13" disabled></button>
+                  <button class="seatBtn" id="C14" disabled></button>
+                  <button class="seatBtn" id="C15"></button>
+                </div>
+              </div>
+              <div id="backSect">
+                <div class="btn-group">
+                  <button class="seatBtn" id="D1"></button>
+                  <button class="seatBtn" id="D2"></button>
+                  <img class="seatBtn" id="D3" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D4" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D5" src="images/handicapped.png"></img>
+                  <button class="seatBtn" id="D6"></button>
+                  <img class="seatBtn" id="D7" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D8" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D9" src="images/handicapped.png"></img>
+                  <button class="seatBtn" id="D10"></button>
+                  <img class="seatBtn" id="D11" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D12" src="images/handicapped.png"></img>
+                  <img class="seatBtn" id="D13" src="images/handicapped.png"></img>
+                  <button class="seatBtn" id="D14"></button>
+                  <button class="seatBtn" id="D15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="E1" disabled></button>
+                  <button class="seatBtn" id="E2" disabled></button>
+                  <button class="seatBtn" id="E3"></button>
+                  <button class="seatBtn" id="E4"></button>
+                  <button class="seatBtn" id="E5"></button>
+                  <button class="seatBtn" id="E6"></button>
+                  <button class="seatBtn" id="E7" disabled></button>
+                  <button class="seatBtn" id="E8"></button>
+                  <button class="seatBtn" id="E9"></button>
+                  <button class="seatBtn" id="E10"></button>
+                  <button class="seatBtn" id="E11" disabled></button>
+                  <button class="seatBtn" id="E12" disabled></button>
+                  <button class="seatBtn" id="E13" disabled></button>
+                  <button class="seatBtn" id="E14" disabled></button>
+                  <button class="seatBtn" id="E15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="F1"></button>
+                  <button class="seatBtn" id="F2"></button>
+                  <button class="seatBtn" id="F3"></button>
+                  <button class="seatBtn" id="F4"></button>
+                  <button class="seatBtn" id="F5"></button>
+                  <button class="seatBtn" id="F6"></button>
+                  <button class="seatBtn" id="F7"></button>
+                  <button class="seatBtn" id="F8"></button>
+                  <button class="seatBtn" id="F9"></button>
+                  <button class="seatBtn" id="F10"></button>
+                  <button class="seatBtn" id="F11"></button>
+                  <button class="seatBtn" id="F12"></button>
+                  <button class="seatBtn" id="F13"></button>
+                  <button class="seatBtn" id="F14"></button>
+                  <button class="seatBtn" id="F15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="G1"></button>
+                  <button class="seatBtn" id="G2"></button>
+                  <button class="seatBtn" id="G3"></button>
+                  <button class="seatBtn" id="G4"></button>
+                  <button class="seatBtn" id="G5"></button>
+                  <button class="seatBtn" id="G6" disabled></button>
+                  <button class="seatBtn" id="G7" disabled></button>
+                  <button class="seatBtn" id="G8"></button>
+                  <button class="seatBtn" id="G9"></button>
+                  <button class="seatBtn" id="G10"></button>
+                  <button class="seatBtn" id="G11"></button>
+                  <button class="seatBtn" id="G12"></button>
+                  <button class="seatBtn" id="G13"></button>
+                  <button class="seatBtn" id="G14" disabled></button>
+                  <button class="seatBtn" id="G15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="H1"></button>
+                  <button class="seatBtn" id="H2"></button>
+                  <button class="seatBtn" id="H3"></button>
+                  <button class="seatBtn" id="H4"></button>
+                  <button class="seatBtn" id="H5"></button>
+                  <button class="seatBtn" id="H6"></button>
+                  <button class="seatBtn" id="H7"></button>
+                  <button class="seatBtn" id="H8" disabled></button>
+                  <button class="seatBtn" id="H9" disabled></button>
+                  <button class="seatBtn" id="H10"></button>
+                  <button class="seatBtn" id="H11"></button>
+                  <button class="seatBtn" id="H12"></button>
+                  <button class="seatBtn" id="H13"></button>
+                  <button class="seatBtn" id="H14"></button>
+                  <button class="seatBtn" id="H15"></button>
+                </div>
+                <div class="btn-group">
+                  <button class="seatBtn" id="I1"></button>
+                  <button class="seatBtn" id="I2" disabled></button>
+                  <button class="seatBtn" id="I3" disabled></button>
+                  <button class="seatBtn" id="I4" disabled></button>
+                  <button class="seatBtn" id="I5"></button>
+                  <button class="seatBtn" id="I6"></button>
+                  <button class="seatBtn" id="I7"></button>
+                  <button class="seatBtn" id="I8"></button>
+                  <button class="seatBtn" id="I9"></button>
+                  <button class="seatBtn" id="I10" disabled></button>
+                  <button class="seatBtn" id="I11"></button>
+                  <button class="seatBtn" id="I12"></button>
+                  <button class="seatBtn" id="I13" disabled></button>
+                  <button class="seatBtn" id="I14" disabled></button>
+                  <button class="seatBtn" id="I15"></button>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="lettersR">
+              <div id="seatLetters">
+                <div id="frontLet">A B C</div>
+
+                <div id="backLet">D E F G H I</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="legend">
+            <div id="legendVal">
+              <button class="legAvail" disabled></button>
+              Available
+            </div>
+
+            <div id="legendVal">
+              <button class="legUnavail" disabled></button>
+              Unavailable
+            </div>
+
+            <div id="legendVal">
+              <button class="legSel" disabled></button>
+              Selected
+            </div>
+          </div>
+
+          <div id="seatsChosen">Tickets: </div>
+        </div>
+
+        <p class="collapse"> 3 Payment Information </p>
+        <div class="content">
+          <div class="wrapper">
+            <div class="containerPayment">
+              <div class="title">CARD DETAILS</div>
+
+              <div class="input-form">
+                <div class="section-1">
+                  <div class="items">
+                    <label class="label">Card Number</label>
+                    <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="1234 1234 1234 1234">
+                  </div>
+                </div>
+                <div class="section-2">
+                  <div class="items">
+                    <label class="label">Name on Card</label>
+                    <input type="text" class="input" placeholder="Janky Jones">
+                  </div>
+                </div>
+                <div class="section-3">
+                  <div class="items">
+                    <label class="label">Expiry Date</label>
+                    <input type="text" class="input" data-mask="00 / 00" placeholder="MM / YY">
+                  </div>
+                  <div class="items">
+                    <div class="cvc">
+                      <label class="label">CVC code</label>
+                    </div>
+                    <input type="text" class="input" data-mask="0000" placeholder="0000">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <script type="text/javascript" src="number.js"></script>
+        <script type="text/javascript">
+            $('input.count').each(function () {
+                $(this).number();
+            });
+        </script>
+
+        <script>
+                document.addEventListener("DOMContentLoaded", function(event) {
+
+                var coll = document.getElementsByClassName("collapse");
+                var box = document.getElementsByClassName('content');
+
+                for (var i = 0; i < coll.length; i++) {
+                    coll[i].onclick = function() {
+                        var setClasses = !this.classList.contains('active');
+                        setClass(coll, 'active', 'remove');
+                        setClass(box, 'show', 'remove');
+
+                        if (setClasses) {
+                            this.classList.toggle("active");
+                            this.nextElementSibling.classList.toggle("show");
+                        }
+                    }
+                }
+
+                function setClass(els, className, fnName) {
+                    for (var i = 0; i < els.length; i++) {
+                        els[i].classList[fnName](className);
+                    }
+                }
+
+                });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+
+            var coll = document.getElementsByClassName("collapse");
+            var box = document.getElementsByClassName('content');
+
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].onclick = function() {
+                    var setClasses = !this.classList.contains('active');
+                    setClass(coll, 'active', 'remove');
+                    setClass(box, 'show', 'remove');
+
+                    if (setClasses) {
+                        this.classList.toggle("active");
+                        this.nextElementSibling.classList.toggle("show");
+                    }
+                }
+            }
+
+            function setClass(els, className, fnName) {
+                for (var i = 0; i < els.length; i++) {
+                    els[i].classList[fnName](className);
+                }
+            }
+
+            });
+      </script>
+
+      </div>
+    </div>
+
+    <div class="right-pay">
+      <!-- order summary -->
+      <div class="column payment" id="orderSummary">
+        <div class="orderHeader">
+          <h2>Order Summary</h2>
+        </div>
+
+        <div class="orderTimer">
+          <p id="timer">8:00</p>
+        </div>
+
+        <div class="ticketsInfo">
+          <p class="p-ticket"> Spirited Away </p>
+          <p class="p-ticket"> Cinema City Northgate </p>
+          <p class="p-ticket"> November 25, 2019 </p>
+          <p class="p-ticket"> 10:00 PM (regular) </p>
+        </div>
+
+        <div class="ticketPrices">
+          <p class="p-ticket" id="ticketStart"></p>
+            <p class="p-ticket" id="ticketGeneral"></p>
+            <p class="p-ticket" id="ticketChild"></p>
+            <p class="p-ticket" id="ticketSenior"></p>
+
+          <p class="p-ticket" id="ticketTax">Tax</p>
+          <p class="p-ticket" id="ticketTotal">Total</p>
+        </div>
+
+        <div class="ticketBtns">
+          <a class="movieinfo-btn" href="index.html"><button class="ticketBtn" id="cancel">CANCEL</button></a>
+          <a class="movieinfo-btn" href="ticket.html"><button class="ticketBtn" id="confirm">CONFIRM</button></a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+</body>
+
+  <!-- header resize -->
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("header").style.fontSize = "100%";
+        document.getElementById("headerLogo").style.width = "23%";
+        document.getElementById("headerLogo").src = "images/siteLogoAlt.png";
+      } else {
+        document.getElementById("header").style.fontSize = "150%";
+        document.getElementById("headerLogo").style.width = "20%";
+        document.getElementById("headerLogo").src = "images/siteLogo.png";
+      }
+    }
+  </script>
+
+  <!-- timer -->
+  <script>
+    var minutes = 7;
+    var seconds = 60;
+    var secCounter = 0;
+
+    function updateTimer() {
+      seconds -= 1;
+
+      if (seconds<10 && seconds>=0) {
+        seconds = "0" + seconds;
+      }
+
+      document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+      if (seconds==0 && minutes>0) {
+        minutes--;
+        seconds = 60;
+      } else if (minutes==0) {
+        document.getElementById("timer").style.color = "red";
+      } else if(seconds==0 && minutes==0) {
+        window.location.reload();
+      }
+    }
+
+    /* event will happen every 1000ms (i.e., 1 second) */
+    setInterval(updateTimer, 1000);
+
+  </script>
+
+  <!-- seat selection -->
+  <script>
+    $(document).ready(function() {
+      var seatList = "Tickets: ";
+      var totalTix = 0;
+      var numSeats = 0;
+      var ticketsSelected = false;
+      var seatsSelected = false;
+
+      /* tickets have been selected */
+      $("#selectTix").click(function() {
+        if(seatsSelected) {
+          if (confirm("Changing your ticket selection will make you lose your reserved seats.")) {
+
+            /* clear seat selection */
+            $(".seatBtn:not(:disabled)").each(function() {
+              $(this).css("background-color", "lightgray");
+              $(this).toggleClass("pressed", false);
+            });
+
+            numSeats = 0;
+            seatsSelected = false;
+            seatList = "Tickets: ";
+          } else {
+            //dont drop down
+          }
+        } //if seatsSelected
+
+        if (totalTix > 0) {
+          ticketsSelected = true;
+        }
+      });
+
+
+      /*---tickets calculation ---*/
+      setInterval(calculateTickets, 1);
+
+      //calculate the number of tickets user has
+      function calculateTickets() {
+        var numGTix = parseInt(document.getElementById("generalTix").value);
+        var numCTix = parseInt(document.getElementById("childTix").value);
+        var numSTix = parseInt(document.getElementById("seniorTix").value);
+        var gPrice = 0;
+        var cPrice = 0;
+        var sPrice = 0;
+
+        totalTix = numGTix + numCTix + numSTix;
+
+        if (numGTix > 0) {
+          gPrice = numGTix*11.50;
+          document.getElementById("ticketGeneral").innerHTML = "General(x" + numGTix + ") $" + gPrice.toFixed(2);
+        } else {
+          document.getElementById("ticketGeneral").innerHTML = "";
+        }
+
+        if (numCTix > 0) {
+          cPrice = numCTix*5.50;
+          document.getElementById("ticketChild").innerHTML = "Child(x" + numCTix + ") $" + cPrice.toFixed(2);
+        } else {
+          document.getElementById("ticketChild").innerHTML = "";
+        }
+
+        if (numSTix > 0) {
+          sPrice = numSTix*8.50;
+          document.getElementById("ticketSenior").innerHTML = "Senior(x" + numSTix + ") $" + sPrice.toFixed(2);
+        } else {
+          document.getElementById("ticketSenior").innerHTML = "";
+        }
+
+        var tax = 0;
+        var total = 0;
+
+        if (totalTix > 0) {
+          //calculate tax:
+          var decTax = (gPrice + cPrice + sPrice)*.12;
+          tax = decTax.toFixed(2);
+          document.getElementById("ticketTax").innerHTML = "Tax $" + tax;
+
+          //calculate total
+          total = gPrice + cPrice + sPrice + parseFloat(tax);
+          document.getElementById("ticketTotal").innerHTML = "Total $" + total.toFixed(2);
+
+          document.getElementById("ticketStart").innerHTML = "Tickets:"
+
+          document.getElementById("confirm").disabled = false;
+          document.getElementById("confirm").style.backgroundColor = "#255da1";
+          document.getElementById("confirm").style.cursor = "pointer";
+        } else {
+          tax = 0;
+          total = 0;
+
+          document.getElementById("ticketTax").innerHTML = "";
+          document.getElementById("ticketTotal").innerHTML = "";
+          document.getElementById("ticketStart").innerHTML = "";
+
+          document.getElementById("confirm").disabled = true;
+          document.getElementById("confirm").style.backgroundColor = "gray";
+          document.getElementById("confirm").style.cursor = "default";
+        }
+
+
+      }
+
+      //run whenever a seat is chosen in seat selection
+      $(".seatBtn").click(function() {
+        if ((totalTix > 0) && (numSeats < totalTix)) {
+          $(this).toggleClass("pressed");
+          seatsSelected = true;
+
+          var act = $(this).hasClass("pressed");
+
+          if (act) {
+            numSeats++;
+            seatList += $(this).attr('id');
+
+            $("#seatsChosen").text(seatList);
+
+            if (numSeats < totalTix) {
+              seatList += ", ";
+            }
+          } else {
+            numSeats--;
+          }
+
+        }
+      });
+
+    });
+
+  </script>
+</html>

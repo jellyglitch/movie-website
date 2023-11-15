@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript">
+    function swapToNowPlaying(div1,div2)
+    {
+     d1 = document.getElementById(div1);
+     d2 = document.getElementById(div2);
+     d1.style.display = "block";
+     d2.style.display = "none";
+
+    }
+
+    function swapToComingSoon(div1,div2)
+    {
+     d1 = document.getElementById(div1);
+     d2 = document.getElementById(div2);
+     d1.style.display = "none";
+     d2.style.display = "block";
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="header">
+    <!--site logo (click to go back to homepage)-->
+    <a href="index.html">
+      <img id="headerLogo" src="images/siteLogo.png" alt="Janky Movies">
+    </a>
+
+    <!-- search bar -->
+    <div class="searchBar">
+      <input type="text" name="search" placeholder="Search..">
+    </div>
+
+    <!-- login and signup buttons -->
+      <div class="button-grp">
+        <button class="userBtn">LOG IN</button>
+        <button class="userBtn">SIGN UP</button>
+      </div>
+  </div>
+
+  <div id="mainBody">
+    <div class="center">
+      <button class="npcsbuttons" onclick="swapToNowPlaying('divNowPlaying','divComingSoon')">Now Playing</button>
+      <button class="npcsbuttons" onclick="swapToComingSoon('divNowPlaying','divComingSoon')">Coming Soon</button>
+    </div>
+
+    <!-- movie list -->
+    <div class="container">
+
+      <!-- movie list of now playing -->
+      <div id="divNowPlaying" class="movieDiv" style="display:block;">
+        <div class="moviePic">
+            <a href="movie-info.html">
+              <img class="inContainer" src="images/spiritedaway.jpg">
+            </a>
+
+            <div class="moviePreview">
+                <div class="movieInfo">
+                  <h2>Spirited Away</h2>
+                  <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                  <br>
+                  <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+                </div>
+
+                <br><br>
+                <div class="movieRating">
+                  <img src="images/pg13.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/arriety.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Arriety</h2>
+                <p class="plot">Arrietty, a tiny teenager, lives with her parents in the recesses of a suburban home, unbeknown to the homeowner and housekeeper.</p>
+                <br>
+                <p class="cast">Starring: Mirai Shida, Ryunosuke Kamiki, Shinobu Otake, Keiko Takeshita.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/br.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Bohemian Rhapsody</h2>
+                <p class="plot">Freddie Mercury -- the lead singer of Queen -- defies stereotypes and convention to become one of history's most beloved entertainers. The band's revolutionary sound and popular songs lead to Queen's meteoric rise in the 1970s. </p>
+                <br>
+                <p class="cast">Starring: Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/howl.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Howl's Moving Castle</h2>
+                <p class="plot">Sophie has an uneventful life at her late father's hat shop, but all that changes when she befriends wizard Howl, who lives in a magical flying castle.</p>
+                <br>
+                <p class="cast">Starring: Chieko Baisho, Takuya Kimura, Akihiro Miwa.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/joker.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Joker</h2>
+                <p class="plot">In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime.</p>
+                <br>
+                <p class="cast">Starring: Joaquin Phoenix, Robert De Niro, Zazie Beetz.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/totoro.jpg">
+          </a>
+
+          <div class="moviePreview">
+              <div class="movieInfo">
+                <h2>My Neighbor Totoro</h2>
+                <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                <br>
+                <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/ww.jpg">
+          </a>
+
+          <div class="moviePreview">
+              <div class="movieInfo">
+                <h2>Wonder Woman</h2>
+                <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                <br>
+                <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/abominable.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Abominable</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/greenbook.jpg">
+          </a>
+
+            <div class="moviePreview">
+              <div class="movieInfo">
+                <h2>Green Book</h2>
+                <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                <br>
+                <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/littlewoods.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Little Woods</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/fb.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Fantastic Beasts</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/panda.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Panda</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/it.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>IT: Chapter Two</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/af.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>The Addams Family</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/ps.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Pet Sematary</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+      </div> <!--now playing-->
+
+      <!-- movie list of coming soon -->
+      <div id="divComingSoon" class="movieDiv" style="display:none;">
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/greenbook.jpg">
+          </a>
+
+            <div class="moviePreview">
+              <div class="movieInfo">
+                <h2>Green Book</h2>
+                <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                <br>
+                <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+              </div>
+
+              <br><br>
+              <div class="movieRating">
+                <img src="images/pg13.png">
+              </div>
+            </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/littlewoods.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Little Woods</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/fb.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Fantastic Beasts</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/panda.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Panda</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/it.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>IT: Chapter Two</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/af.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>The Addams Family</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+
+        <div class="moviePic">
+          <a href="movie-info.html">
+            <img class="inContainer" src="images/ps.jpg">
+          </a>
+
+          <div class="moviePreview">
+            <div class="movieInfo">
+              <h2>Pet Sematary</h2>
+              <p class="plot">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+              <br>
+              <p class="cast">Starring: Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito.</p>
+            </div>
+
+            <br><br>
+            <div class="movieRating">
+              <img src="images/pg13.png">
+            </div>
+          </div>
+        </div>
+      </div> <!--comingsoon-->
+    </div> <!--container-->
+
+    <div class="pageArrows">
+      <a href="#">❯</a>
+    </div>
+
+  </div> <!-- main body -->
+
+  <div class="footer">
+
+  </div>
+  </body>
+
+<!-- hover details follow cursor -->
+ <script>
+    var hoverInfo = document.querySelectorAll('.moviePreview');
+
+    window.onmousemove = function (e) {
+        var x = (e.clientX + 'px'),
+            y = (e.clientY + 'px');
+
+        for (var i = 0; i < hoverInfo.length; i++) {
+            hoverInfo[i].style.top = y;
+            hoverInfo[i].style.left = x;
+        }
+    };
+  </script>
+
+  <!-- header resize -->
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("header").style.fontSize = "100%";
+        document.getElementById("headerLogo").style.width = "23%";
+        document.getElementById("headerLogo").src = "images/siteLogoAlt.png";
+      } else {
+        document.getElementById("header").style.fontSize = "150%";
+        document.getElementById("headerLogo").style.width = "20%";
+        document.getElementById("headerLogo").src = "images/siteLogo.png";
+      }
+    }
+  </script>
+
+  <script>
+    $(document).ready(function() {
+
+      $(".moviePic").click(function() {
+        window.location.href = "movie-info.html"
+      });
+
+    });
+  </script>
+
+</html>

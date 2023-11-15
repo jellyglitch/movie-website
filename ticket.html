@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Jankyfilms.com | Thank-you for purchasing! </title>
+  </head>
+
+  <body>
+    <div id="header">
+      <!--site logo (click to go back to homepage)-->
+      <a href="index.html">
+        <img id="headerLogo" src="images/siteLogo.png" alt="Janky Movies">
+      </a>
+
+      <!-- search bar -->
+      <div class="searchBar">
+        <input type="text" name="search" placeholder="Search..">
+      </div>
+
+      <!-- login and signup buttons -->
+        <div class="button-grp">
+          <button class="userBtn">LOG IN</button>
+          <button class="userBtn">SIGN UP</button>
+        </div>
+    </div>
+
+    <div class="ticket">
+        <h1 class="ticket"> Thank you for your purchase! </h1>
+        <br>
+        <div class="ticketBox">
+             <p class="p-ticket"> Spirited Away </p>
+             <p class="p-ticket"> Cinema City Northgate </p>
+             <p class="p-ticket"> November 25, 2019 </p>
+             <p class="p-ticket"> 10:00 PM (regular) </p>
+        </div>
+
+        <div class="ticketBox">
+          <p class="p-ticket"> Tickets </p>
+          <p class="indent space1 p-ticket">General(x2) 23.00</p>
+          <p class="indent space2 p-ticket">Child(x2) 11.00</p>
+          <p class="space3 p-ticket"> Tax 4.42</p>
+          <p class="space4 p-ticket"> Total 38.42</p>
+        </div>
+    </div>
+    <div class="centerBtn">
+      <button class="dl"> Download Tickets </button>
+    </div>
+  </body>
+
+  <!-- header resize -->
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("header").style.fontSize = "100%";
+        document.getElementById("headerLogo").style.width = "23%";
+        document.getElementById("headerLogo").src = "images/siteLogoAlt.png";
+      } else {
+        document.getElementById("header").style.fontSize = "150%";
+        document.getElementById("headerLogo").style.width = "20%";
+        document.getElementById("headerLogo").src = "images/siteLogo.png";
+      }
+    }
+  </script>
+</html>

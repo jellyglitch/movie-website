@@ -1,0 +1,1001 @@
+body {
+  background-color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  height:100%;
+}
+
+img {
+  width: 100%;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  padding: 5px;
+
+  font-size: 150%;
+  font-family: sans-serif;
+  text-align: center;
+
+  transition: 0.5s;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+#header .button-grp {
+  margin-right: 50px;
+  display: inline-block;
+}
+
+#header h1 {
+  color: white;
+  width: 20%;
+  margin-right: 50px;
+  display: inline-block;
+}
+
+#header .searchBar {
+  width: 30%;
+  height: 20%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+#headerLogo {
+  width: 20%;
+  float: left;
+}
+
+#headerLogo:hover {
+  cursor: pointer;
+}
+
+/* Search bar */
+input[type=text] {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* login and signup buttons */
+.button-grp {
+  margin: auto;
+  top: 35%;
+  right: 0;
+  position: absolute;
+}
+
+.button-grp .userBtn {
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-emphasis: bold;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.userBtn:hover {
+  border: 1px solid white;
+}
+
+/*---------*/
+
+p {
+  color: darkslategray;
+  text-align: left;
+  margin-top: 100px;
+  margin-right: 10px;
+  margin-left: 300px;
+}
+
+p.preview {
+  margin: 0;
+}
+
+.mainBody {
+  background-color: black;
+  width: 100%;
+  height: 300px;
+  margin-top: 500px;
+}
+/*---------------------NS/CS buttons----------------------*/
+.npcsbuttons{
+    background-color: white;
+    color: grey;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid grey;
+    font-family: Arial;
+}
+
+.npcsbuttons:hover, .npcsbuttons:active{
+    color: black;
+    font-weight: bold;
+    background-color: #dfdfdf;
+    transition: 0.5s;
+}
+
+.center{
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 25%;
+    width: 50%;
+}
+
+/*---------------------movie list----------------------*/
+.container {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    text-align: center;
+    overflow: hidden;
+}
+
+.moviePic {
+    border: 1px solid gray;
+    display: inline-block;
+    height: 275px;
+    width: 200px;
+    margin: 30px;
+}
+
+.moviePic:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px darkslategray;
+    transition: 0.5s;
+}
+
+.moviePic:hover .moviePreview {
+    display: block;
+}
+
+/* Movie preview (synopsis and other information at hover) */
+.moviePreview {
+    display: none;
+
+    font-size: 70%;
+    font-family: sans-serif;
+    background-color: white;
+    border: 1px solid gray;
+
+    position: absolute;
+    z-index: 1000;
+
+    width: 200px;
+    height: 230px;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.moviePreview p {
+  margin: 1px;
+}
+
+.moviePreview .cast {
+  color: blue;
+}
+
+.movieRating {
+  width: 30%;
+  height: 10%;
+}
+
+/* each movie picture/link is in a container */
+.inContainer {
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+/*--------------------page arrows-----------------------*/
+.pageArrows {
+  margin: auto  48%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.pageArrows a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pageArrows a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pageArrows a:hover {
+  background-color: #dfdfdf;
+}
+
+/*--------------------FOOTER--------------------------*/
+.footer {
+  background-color: darkslategray;
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+  padding: 0;
+}
+
+/*---------------------movie info page----------------------*/
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Left column */
+.leftcol {
+  margin-top:150px;
+  float: left;
+  width: 30%;
+}
+
+/* Right column */
+.rightcol {
+  margin-top:150px;
+  float: left;
+  width: 70%;
+  background-color: #f1f1f1;
+  margin-top: 145px;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcol, .rightcol {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+select{
+  background: lightblue;
+  color: black;
+  padding: 5px;
+  text-indent: 5px;
+}
+
+.moviebutton{
+  background-color: darkblue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.dropdown:onclick .list {
+  display: block;
+}
+
+.list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.list a:hover {
+  background-color: lightgray;
+}
+
+.dropdown:onclick .dropdown-btn {
+  background-color: lightblue;
+}
+
+.list a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.moviebutton-grp {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.movietxt {
+  margin:auto;
+}
+
+/*---------------------payment page----------------------*/
+.p-inside, .box{
+  display: block;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input.count{
+  border: none;
+  outline: none;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+input.card{
+    width: 70%;
+    font-size: 15px;
+}
+
+input.small{
+    width: 20%;
+    margin-right: 220px;
+}
+
+.forms{
+    margin: 10px 8px;
+    font-size: 20px;
+}
+
+label{
+    margin: 0 253px 0 0;
+}
+
+.column{
+  float: left;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+.column.payment{
+  background-color: whitesmoke;
+  margin-top: 170px;
+  color: white;
+  width: 70%;
+}
+
+@media screen and (max-width:600px) {
+  .column.payment {
+    width: 100%;
+  }
+}
+
+.collapse{
+    background-color: black;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 25px;
+    margin: 0;
+    padding: 5px;
+}
+
+.content{
+    background-color: white;
+    border: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+    color: black;
+    max-height: 0;
+    transition: 0.2s ease-in-out;
+    padding: 0;
+}
+
+.content.show{
+    opacity: 1;
+    max-height: 500px;
+}
+
+.left-pay {
+  margin-left: 60px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.summary, .column.payment {
+    width: 100%;
+  }
+}
+
+.movieinfo-btn {
+
+}
+
+/* payment info dropdown menu */
+.wrapper{
+  width: 100%;
+  padding: 10px;
+}
+
+.containerPayment{
+  max-width: 500px;
+  height: auto;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 40px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 7px solid #5f6c7d;
+}
+
+.title{
+  color: #5f6c7d;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.input-form{
+  margin-bottom: 100px;
+}
+
+.input-form .label{
+	  display: block;
+    font-size: 1em;
+    color: #212121;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.input-form .items{
+  margin-bottom: 20px;
+}
+
+.section-1 .items .input,
+.section-2 .items .input,
+.section-3 .items .input{
+    background: transparent;
+    border: 2px solid #BDBDBD;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #212121;
+    border-radius: 3px;
+}
+
+.input-form .section-3{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-form .section-3 .items{
+   width: 48%;
+}
+
+.btn{
+	background: #5f6c7d;
+	color: #fff;
+	font-size: 1.25em;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.cvc{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cvc .tooltip{
+  color: #d4d4d4;
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align:center;
+  cursor: pointer;
+}
+
+.cvc .cvc-img{
+  position: absolute;
+  top: -300%;
+  right: 0;
+  background: #5f6c7d;
+  padding: 12px;
+  border-radius: 5px;
+  display: none;
+}
+
+.cvc .cvc-img img{
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.cvc:hover .cvc-img{
+  display: block;
+}
+
+@media screen and (max-width: 460px){
+  .input-form .section-3{
+    flex-direction: column;
+  }
+  .input-form .section-3 .items{
+     width: 100%;
+  }
+  .input-form .items{
+    margin-bottom: 10px;
+  }
+
+  .input-form{
+    margin-bottom: 15px;
+  }
+  .title{
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}
+
+/*---------------------Num tickets-------------------------*/
+
+.number-style input{
+
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    color: #000000;
+
+}
+
+.number-style span{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.number-style span.number-minus{
+    border: 2px solid #fe0021;
+}
+
+.number-style span.number-minus::after{
+
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -5px;
+    width: 10px;
+    height: 2px;
+    background-color: #fe0021;
+}
+
+.number-style span.number-plus{
+    border: 2px solid #00fe02;
+}
+
+.number-style span.number-plus::after{
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -5px;
+    width: 10px;
+    height: 2px;
+    background-color: #00fe02;
+}
+
+.number-style span.number-plus::before{
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px 0 0 -1px;
+    width: 2px;
+    height: 10px;
+    background-color: #00fe02;
+}
+
+/*---------------------Seat selection-------------------------*/
+.theatreSeats {
+  width: 50%;
+  min-width: 30%;
+  height: 310px;
+  border: 1px solid darkslategray;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+
+.theatreSeats #screen {
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+  padding: 5px;
+  border-bottom: 1px solid darkslategray;
+  background-color: #242121;
+}
+
+.theatreSeats #lettersL {
+  float: left;
+  background-color: lightgray;
+  width: 4%;
+  height: 90%;
+}
+
+.theatreSeats #lettersR {
+  float: right;
+  background-color: lightgray;
+  width: 4%;
+  height: 90%;
+  transform: translateY(-100.5%);
+}
+
+.theatreSeats #seatLetters {
+  width: 50%;
+  color: gray;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 20px 5px;
+}
+
+.theatreSeats #backLet {
+  margin-top: 20px;
+}
+
+.theatreSeats #actSeats {
+  width: 96%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+.theatreSeats #frontSect {
+  margin: 17px 0;
+}
+
+.theatreSeats #backSect {
+  margin: 5px 0;
+  transform: translateY(-8px);
+}
+
+.btnGroup {
+  width: 100%;
+  position: fixed;
+}
+
+.seatBtn {
+  width: 4%;
+  height: 20px;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  margin: 3px 0;
+}
+
+.seatBtn:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.seatBtn.pressed {
+  background-color: rgb(37,93,161);
+}
+
+.seatBtn:disabled {
+  background-color: #525252;
+}
+
+#legend {
+  width: 50%;
+  height: 50px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+#legendVal {
+  margin: 10px;
+  display: inline;
+}
+
+.legAvail {
+  width: 4%;
+  height: 20px;
+  background-color: lightgray;
+  border: 1px solid gray;
+  margin: 3px 0;
+}
+
+.legUnavail {
+  width: 4%;
+  height: 20px;
+  background-color: #525252;
+  border: 1px solid gray;
+  margin: 3px 0;
+}
+
+.legSel {
+  width: 4%;
+  height: 20px;
+  background-color: #255da1;
+  border: 1px solid lightgray;
+  margin: 3px 0;
+}
+
+img.seatBtn {
+  width: 3.5%;
+  height: 20px;
+  transform: translateY(6px);
+}
+
+#seatsChosen{
+  width: 50%;
+  height: 50px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 20px;
+}
+/*-------------------Order summary----------------------*/
+#orderSummary {
+  width: 20%;;
+  height: 50%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px #e6e6e6;
+
+  padding-bottom: 20px;
+  float: right;
+  margin-right: 60px;
+
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+.orderHeader {
+  background-color: black;
+  padding: 5px;
+}
+
+.orderTimer p{
+  width: 100%;
+  font-size: 25px;
+  color: black;
+  background-color: #cae0de;
+
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ticketPrices {
+  margin: 10px;
+}
+
+.ticketsInfo {
+  background-color: white;
+  padding: 5px;
+}
+
+/*-------------------ticket page----------------------*/
+.ticket{
+    width: 90%;
+    margin: auto;
+    margin-top: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.ticketBox{
+    width: 45%;
+    background: #c5e3e0;
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    height: 185px;
+    overflow: hidden;
+    font-size: 20px;
+
+}
+
+.indent.space1.p-ticket {
+  text-indent: 10%;
+  word-spacing: 110px;
+}
+
+.indent.space2.p-ticket {
+  text-indent: 10%;
+  word-spacing: 135px;
+}
+
+.space3.p-ticket {
+  word-spacing: 258px;
+}
+
+.space4.p-ticket {
+  font-weight: bold;
+  word-spacing: 233px;
+}
+
+.indent{
+  margin-left: 25px;
+  margin-top: -15px;
+}
+
+.p-ticket{
+  margin: 0px;
+  color: black;
+  text-align: left;
+}
+
+#ticketGeneral {
+  text-indent: 10%;
+  word-spacing: 100px;
+}
+
+#ticketChild {
+  text-indent: 10%;
+  word-spacing: 120px;
+}
+
+#ticketSenior {
+  text-indent: 10%;
+  word-spacing: 110px;
+}
+
+#ticketTax {
+  word-spacing: 189px;
+}
+
+#ticketTotal {
+  font-weight: bold;
+  word-spacing: 175px;
+}
+
+
+.space1{
+  word-spacing: 245px;
+}
+
+h1.ticket{
+    width: 90%;
+    color: white;
+    background: black;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.centerBtn{
+    text-align: center;
+    margin: 50px;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.dl{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dl:hover{
+  background: grey;
+}
+
+.ticketsInfo {
+  padding: 10px;
+}
+
+.ticketBtn {
+  border: none;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+#cancel {
+  background-color: gray;
+  font-size: 12px;
+}
+
+#confirm {
+  background-color: #255da1;
+}
+.moveiBtn:link, .moveiBtn:visited {
+  background-color: lightblue;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.moveiBtn:hover, .moveiBtn:active {
+  border: 1px solid white;
+}

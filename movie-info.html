@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Jankyfilms.com | Spirited Away</title>
+
+<script type="text/javascript">
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.moviebutton')) {
+    var dropdowns = document.getElementsByClassName("list");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// dropdowns
+  var x, i, j, selElmnt, a, b, c;
+  /*look for any elements with the class "custom-select":*/
+  x = document.getElementsByClassName("custom-select");
+  for (i = 0; i < x.length; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    /*for each element, create a new DIV that will act as the selected item:*/
+    a = document.createElement("DIV");
+    a.setAttribute("class", "select-selected");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+    /*for each element, create a new DIV that will contain the option list:*/
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 1; j < selElmnt.length; j++) {
+      /*for each option in the original select element,
+      create a new DIV that will act as an option item:*/
+      c = document.createElement("DIV");
+      c.innerHTML = selElmnt.options[j].innerHTML;
+      c.addEventListener("click", function(e) {
+          /*when an item is clicked, update the original select box,
+          and the selected item:*/
+          var y, i, k, s, h;
+          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+          h = this.parentNode.previousSibling;
+          for (i = 0; i < s.length; i++) {
+            if (s.options[i].innerHTML == this.innerHTML) {
+              s.selectedIndex = i;
+              h.innerHTML = this.innerHTML;
+              y = this.parentNode.getElementsByClassName("same-as-selected");
+              for (k = 0; k < y.length; k++) {
+                y[k].removeAttribute("class");
+              }
+              this.setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          h.click();
+      });
+      b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function(e) {
+        /*when the select box is clicked, close any other select boxes,
+        and open/close the current select box:*/
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
+      });
+  }
+  function closeAllSelect(elmnt) {
+    /*a function that will close all select boxes in the document,
+    except the current select box:*/
+    var x, y, i, arrNo = [];
+    x = document.getElementsByClassName("select-items");
+    y = document.getElementsByClassName("select-selected");
+    for (i = 0; i < y.length; i++) {
+      if (elmnt == y[i]) {
+        arrNo.push(i)
+      } else {
+        y[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (i = 0; i < x.length; i++) {
+      if (arrNo.indexOf(i)) {
+        x[i].classList.add("select-hide");
+      }
+    }
+  }
+  /*if the user clicks anywhere outside the select box,
+  then close all select boxes:*/
+  document.addEventListener("click", closeAllSelect);
+</script>
+</head>
+<body>
+
+  <div id="header">
+    <!--site logo (click to go back to homepage)-->
+    <a href="index.html">
+      <img id="headerLogo" src="images/siteLogo.png" alt="Janky Movies">
+    </a>
+
+    <!-- search bar -->
+    <div class="searchBar">
+      <input type="text" name="search" placeholder="Search..">
+    </div>
+
+    <!-- login and signup buttons -->
+      <div class="button-grp">
+        <button class="userBtn">LOG IN</button>
+        <button class="userBtn">SIGN UP</button>
+      </div>
+  </div>
+
+<div class="row">
+  <div class="leftcol">
+    <div class="card">
+      <h2>Spirited Away (2001)</h2>
+      <img class ="sa_img" alt="Spirited Away" src="images/spiritedaway.jpg" style="width:300px;height:400px;">
+    </div>
+    <div class="card">
+      <h2>SELECT THEATRE, DATE, AND SHOWTIME</h2>
+
+      <div class="dropdown">
+        <select>
+          <option value="v0">Select Theatre:</option>
+          <option value="v1">Cinema City Northgate</option>
+          <option value="v2">Cineplex Odeon McGillivray and VIP</option>
+          <option value="v3">SilverCity St.Vital Cinemas</option>
+          <option value="v4">Famous Players Kildonan Place Cinemas</option>
+          <option value="v5">Scotiabank Theatre Winnipeg</option>
+          <option value="v6">Cineplex Cinemas Southland</option>
+        </select>
+      </div>
+      <br>
+      <div class="dropdown">
+        <select>
+          <option value="0">Select Date:</option>
+          <option value="1">(Today)Sun, Nov 24, 2019</option>
+          <option value="2">(Tomorrow)Mon, Nov 25, 2019</option>
+          <option value="3">Nov 26, 2019</option>
+          <option value="4">Nov 27, 2019</option>
+          <option value="5">Nov 28, 2019</option>
+          <option value="6">Nov 29, 2019</option>
+          <option value="7">Nov 30, 2019</option>
+        </select>
+      </div>
+      <br>
+      <div class="dropdown">
+        <select>
+          <option value="0">Select Showtime:</option>
+          <option value="1">IMAX - 11:00 AM</option>
+          <option value="2">IMAX - 1:45 PM</option>
+          <option value="3">IMAX - 4:30 PM</option>
+          <option value="4">IMAX - 7:15 PM</option>
+          <option value="5">Regular 3D - 10:00 AM</option>
+          <option value="6">Regular 3D - 11:30 AM</option>
+          <option value="6">Regular 3D - 12:45 PM</option>
+          <option value="6">Regular 3D - 2:15 PM</option>
+          <option value="6">Regular - 11:30 AM</option>
+          <option value="6">Regular - 2:45 PM</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+  <div class="rightcol">
+    <div class="card">
+      <h2>Trailer</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ByXuk9QqQkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="card">
+      <h3>Synopsis</h3>
+      <p class= "movietxt">In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Naitô, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park. After her mother and father are turned into giant pigs, Chihiro meets the mysterious Haku (Miyu Irino), who explains that the park is a resort for supernatural beings who need a break from their time spent in the earthly realm, and that she must work there to free herself and her parents.</p>
+      <h3>Cast</h3>
+      <p class= "movietxt">Rumi Hiiragi
+        <br>Miyu Irino
+        <br>Mari Natsuki
+        <br>Takashi Naitô
+        <br>Yasuko Sawaguchi
+        <br>Tatsuya Gashûin
+        <br>Ryûnosuke Kamiki
+        <br>Yumi Tamai
+        <br>Yô Ôizumi
+        <br>Koba Hayashi
+        <br>Tsunehiko Kamijô
+        <br>Takehiko Ono
+        <br>Bunta Sugawara</p>
+    </div>
+    <div class="nocolorcard">
+        <div class="moviebutton-grp">
+            <a class="moveiBtn" href="index.html">CANCEL</a>
+            <a class="moveiBtn" href="payment.html">PROCEED</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+
+<!-- header resize -->
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+      document.getElementById("header").style.fontSize = "100%";
+      document.getElementById("headerLogo").style.width = "23%";
+      document.getElementById("headerLogo").src = "images/siteLogoAlt.png";
+    } else {
+      document.getElementById("header").style.fontSize = "150%";
+      document.getElementById("headerLogo").style.width = "20%";
+      document.getElementById("headerLogo").src = "images/siteLogo.png";
+    }
+  }
+</script>
+
+</html>
